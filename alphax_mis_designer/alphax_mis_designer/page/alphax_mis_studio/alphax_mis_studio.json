@@ -1,0 +1,15 @@
+{
+  "doctype": "Page",
+  "name": "alphax-mis-studio",
+  "title": "AlphaX MIS Studio",
+  "module": "AlphaX MIS Designer",
+  "standard": "Yes",
+  "roles": [
+    {
+      "role": "System Manager"
+    },
+    {
+      "role": "Accounts Manager"
+    }
+  ]
+}

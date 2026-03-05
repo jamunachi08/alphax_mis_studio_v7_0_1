@@ -1,0 +1,37 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Visual Template",
+  "module": "AlphaX MIS Designer",
+  "autoname": "field:template_title",
+  "fields": [
+    {
+      "fieldname": "template_title",
+      "fieldtype": "Data",
+      "label": "Template Title",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "default_mode",
+      "fieldtype": "Select",
+      "label": "Default Mode",
+      "options": "Actual\nBudget\nBoth",
+      "default": "Both"
+    },
+    {
+      "fieldname": "rows",
+      "fieldtype": "Table",
+      "label": "Rows",
+      "options": "MIS Visual Row"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Row Mapping",
+  "module": "AlphaX MIS Designer",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "row_key",
+      "fieldtype": "Data",
+      "label": "Row Key",
+      "reqd": 1
+    },
+    {
+      "fieldname": "label",
+      "fieldtype": "Data",
+      "label": "Label"
+    },
+    {
+      "fieldname": "base_cell",
+      "fieldtype": "Data",
+      "label": "Base Cell (First Month)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "period_col_step",
+      "fieldtype": "Int",
+      "label": "Period Column Step",
+      "default": "1"
+    },
+    {
+      "fieldname": "column_break1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "accounts",
+      "fieldtype": "Small Text",
+      "label": "Accounts (one per line)"
+    },
+    {
+      "fieldname": "account_groups",
+      "fieldtype": "Small Text",
+      "label": "Account Groups (one per line)"
+    },
+    {
+      "fieldname": "sign_factor",
+      "fieldtype": "Float",
+      "label": "Sign Factor",
+      "default": "1"
+    }
+  ]
+}

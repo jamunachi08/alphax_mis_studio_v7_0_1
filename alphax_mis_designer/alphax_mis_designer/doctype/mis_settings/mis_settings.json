@@ -1,0 +1,56 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Settings",
+  "module": "AlphaX MIS Designer",
+  "issingle": 1,
+  "fields": [
+    {
+      "fieldname": "section_dim",
+      "fieldtype": "Section Break",
+      "label": "Dimension Settings"
+    },
+    {
+      "fieldname": "department_dimension_fieldname",
+      "fieldtype": "Data",
+      "label": "Department Dimension Fieldname"
+    },
+    {
+      "fieldname": "lob_dimension_fieldname",
+      "fieldtype": "Data",
+      "label": "LOB Dimension Fieldname"
+    },
+    {
+      "fieldname": "section_budget",
+      "fieldtype": "Section Break",
+      "label": "Budget Settings"
+    },
+    {
+      "fieldname": "budget_use_monthly_distribution",
+      "fieldtype": "Check",
+      "label": "Use Monthly Distribution if set on Budget",
+      "default": 1
+    },
+    {
+      "fieldname": "budget_fallback_even_if_no_distribution",
+      "fieldtype": "Check",
+      "label": "If Budget has no Monthly Distribution, spread evenly by month",
+      "default": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts Manager",
+      "read": 1,
+      "write": 1,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}

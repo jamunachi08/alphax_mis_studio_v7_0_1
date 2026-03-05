@@ -1,0 +1,5 @@
+@media print {
+  .navbar, .page-head, .page-title, .layout-side-section, .form-message, .btn, .input-group, .dropdown, .frappe-control, .alphax-no-print { display:none !important; }
+  .layout-main-section { margin:0 !important; padding:0 !important; }
+  .alphax-print-card { border:1px solid #999 !important; border-radius:10px; padding:10px; margin-bottom:8px; }
+}

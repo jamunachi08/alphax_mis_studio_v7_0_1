@@ -1,0 +1,4 @@
+.alphax-builder{padding:16px;}
+.alphax-builder .grid{display:grid;grid-template-columns:360px 1fr 1fr;gap:12px;align-items:start;}
+.alphax-card{background:#fff;}
+@media(max-width:1300px){.alphax-builder .grid{grid-template-columns:1fr;}}

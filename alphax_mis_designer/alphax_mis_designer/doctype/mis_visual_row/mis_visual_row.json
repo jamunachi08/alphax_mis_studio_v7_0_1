@@ -1,0 +1,70 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Visual Row",
+  "module": "AlphaX MIS Designer",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "section",
+      "fieldtype": "Data",
+      "label": "Section"
+    },
+    {
+      "fieldname": "row_key",
+      "fieldtype": "Data",
+      "label": "Row Key"
+    },
+    {
+      "fieldname": "row_type",
+      "fieldtype": "Select",
+      "label": "Row Type",
+      "options": "Account\nAccount Group\nFormula\nHeading\nSubtotal",
+      "default": "Account"
+    },
+    {
+      "fieldname": "label",
+      "fieldtype": "Data",
+      "label": "Label",
+      "reqd": 1
+    },
+    {
+      "fieldname": "indent",
+      "fieldtype": "Int",
+      "label": "Indent Level",
+      "default": 0
+    },
+    {
+      "fieldname": "is_bold",
+      "fieldtype": "Check",
+      "label": "Bold",
+      "default": 0
+    },
+    {
+      "fieldname": "accounts",
+      "fieldtype": "Small Text",
+      "label": "Accounts (one per line)"
+    },
+    {
+      "fieldname": "account_groups",
+      "fieldtype": "Small Text",
+      "label": "Account Groups (one per line)"
+    },
+    {
+      "fieldname": "formula",
+      "fieldtype": "Small Text",
+      "label": "Formula (use row keys)"
+    },
+    {
+      "fieldname": "sign_factor",
+      "fieldtype": "Int",
+      "label": "Sign (+1/-1)",
+      "default": 1
+    },
+    {
+      "fieldname": "is_hidden",
+      "fieldtype": "Check",
+      "label": "Hidden",
+      "default": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Column Mapping",
+  "module": "AlphaX MIS Designer",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "label",
+      "fieldtype": "Data",
+      "label": "Column Label"
+    },
+    {
+      "fieldname": "dimension_field",
+      "fieldtype": "Data",
+      "label": "Dimension Fieldname"
+    },
+    {
+      "fieldname": "dimension_value",
+      "fieldtype": "Data",
+      "label": "Dimension Value"
+    },
+    {
+      "fieldname": "col_offset",
+      "fieldtype": "Int",
+      "label": "Column Offset",
+      "default": "0"
+    }
+  ]
+}

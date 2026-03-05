@@ -1,0 +1,69 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Dimension",
+  "module": "AlphaX MIS Designer",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "track_changes": 1,
+  "autoname": "field:dimension_title",
+  "fields": [
+    {
+      "fieldname": "dimension_title",
+      "label": "Dimension Title",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "dimension_key",
+      "label": "Dimension Key",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "source_type",
+      "label": "Source Type",
+      "fieldtype": "Select",
+      "options": "DocField\nDataset Column",
+      "reqd": 1
+    },
+    {
+      "fieldname": "doctype_name",
+      "label": "DocType",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "depends_on": "eval:doc.source_type=='DocField'"
+    },
+    {
+      "fieldname": "docfield",
+      "label": "DocField",
+      "fieldtype": "Data",
+      "depends_on": "eval:doc.source_type=='DocField'"
+    },
+    {
+      "fieldname": "dataset",
+      "label": "Dataset",
+      "fieldtype": "Link",
+      "options": "MIS Dataset",
+      "depends_on": "eval:doc.source_type=='Dataset Column'"
+    },
+    {
+      "fieldname": "column_name",
+      "label": "Column Name",
+      "fieldtype": "Data",
+      "depends_on": "eval:doc.source_type=='Dataset Column'"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    }
+  ]
+}

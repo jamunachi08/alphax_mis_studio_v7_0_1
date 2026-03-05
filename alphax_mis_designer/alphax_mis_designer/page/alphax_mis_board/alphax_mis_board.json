@@ -1,0 +1,18 @@
+{
+  "doctype": "Page",
+  "name": "alphax-mis-board",
+  "title": "AlphaX MIS Board",
+  "module": "AlphaX MIS Designer",
+  "standard": "Yes",
+  "roles": [
+    {
+      "role": "System Manager"
+    },
+    {
+      "role": "Accounts Manager"
+    },
+    {
+      "role": "Accounts User"
+    }
+  ]
+}

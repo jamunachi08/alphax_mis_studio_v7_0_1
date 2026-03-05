@@ -1,0 +1,1 @@
+frappe.pages['alphax-mis-tour'].on_page_load=function(w){frappe.ui.make_app_page({parent:w,title:__('AlphaX MIS Tour'),single_column:true});$(w).find('.layout-main-section').html('<div class="alphax-tour"><div id="md"></div></div>');frappe.call('alphax_mis_designer.api.get_tour_markdown',{name:'tour'}).then(r=>{$('#md').html(frappe.markdown(r.message.markdown||"# Tour"));});};

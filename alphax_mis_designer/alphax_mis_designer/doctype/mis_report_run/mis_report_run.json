@@ -1,0 +1,79 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Report Run",
+  "module": "AlphaX MIS Designer",
+  "autoname": "format:MIS-RUN-{YYYY}-{MM}-{#####}",
+  "title_field": "template",
+  "fields": [
+    {
+      "fieldname": "template",
+      "fieldtype": "Link",
+      "label": "Template",
+      "options": "MIS Report Template",
+      "reqd": 1
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "from_date",
+      "fieldtype": "Date",
+      "label": "From Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "to_date",
+      "fieldtype": "Date",
+      "label": "To Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "mode",
+      "fieldtype": "Select",
+      "label": "Mode",
+      "options": "Actual\nBudget\nBoth",
+      "default": "Actual"
+    },
+    {
+      "fieldname": "dimensions_json",
+      "fieldtype": "Long Text",
+      "label": "Dimensions JSON"
+    },
+    {
+      "fieldname": "dataset_json",
+      "fieldtype": "Long Text",
+      "label": "Dataset JSON (flat rows)"
+    },
+    {
+      "fieldname": "created_by",
+      "fieldtype": "Data",
+      "label": "Created By",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0
+    }
+  ]
+}
