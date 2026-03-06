@@ -23,5 +23,8 @@ app_include_js = [
     "/assets/alphax_mis_designer/css/alphax_mis_print.css",
     "/assets/alphax_mis_designer/css/alphax_mis_canvas_v62.css"
 ]
+<<<<<<< HEAD
 
 doctype_js.update({'MIS Visual Template': 'public/js/mis_visual_template.js'})
+=======
+>>>>>>> 9a3a9702254590c7f240162bcd8e4c0d9481f3f4

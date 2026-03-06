@@ -89,6 +89,7 @@ Open: `/app/alphax-mis-dashboard-designer`
 - Admin Console: /app/alphax-mis-admin
 - Builder alias: /app/alphax-mis-builder
 - New DocTypes: MIS Dataset / MIS Metric / MIS Dimension / MIS Data Model
+<<<<<<< HEAD
 
 
 # v7.1 Template-driven MIS
@@ -97,3 +98,5 @@ Open MIS Visual Template and MIS Report Template, import XLSX, map rows/cols, pr
 
 # v7.3 MAP Sheet Auto Mapping
 MIS Report Template now has Import MAP Sheet. Default sheet name: MAP.
+=======
+>>>>>>> 9a3a9702254590c7f240162bcd8e4c0d9481f3f4
