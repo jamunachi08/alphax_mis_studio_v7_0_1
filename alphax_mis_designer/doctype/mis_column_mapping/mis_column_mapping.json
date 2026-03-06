@@ -1,0 +1,55 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Column Mapping",
+  "module": "AlphaX MIS Designer",
+  "custom": 0,
+  "istable": 1,
+  "autoname": "hash",
+  "editable_grid": 1,
+  "fields": [
+    {
+      "fieldname": "col_key",
+      "label": "Column Key",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "col_label",
+      "label": "Label",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "balance_mode",
+      "label": "Balance Mode",
+      "fieldtype": "Select",
+      "options": "Opening\nPeriod Net\nClosing\nYTD\nMTD",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "value_type",
+      "label": "Value Type",
+      "fieldtype": "Select",
+      "options": "Amount\nPercent\nVariance",
+      "default": "Amount"
+    },
+    {
+      "fieldname": "compare_to_col_key",
+      "label": "Compare To Column Key",
+      "fieldtype": "Data",
+      "description": "Base column key for Variance/Percent/Growth",
+      "depends_on": "eval:doc.value_type in ['Variance','Percent','Growth']"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

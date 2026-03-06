@@ -1,0 +1,7 @@
+.alphax-canvas{padding:16px;}
+.alphax-canvas-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:10px;}
+.alphax-tile{border:1px solid var(--border-color,#e5e7eb);border-radius:14px;background:#fff;padding:12px;grid-column:span 3;}
+.alphax-tile .lbl{font-size:11px;color:#6b7280;}
+.alphax-tile .val{font-size:18px;font-weight:700;margin-top:6px;}
+@media(max-width:1100px){.alphax-tile{grid-column:span 6;}}
+@media(max-width:700px){.alphax-tile{grid-column:span 12;}}

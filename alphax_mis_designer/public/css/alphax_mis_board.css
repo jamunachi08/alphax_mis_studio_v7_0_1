@@ -1,0 +1,6 @@
+.alphax-board{padding:16px;}
+.alphax-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px;}
+.alphax-kpi{border:1px solid var(--border-color,#e5e7eb);border-radius:14px;background:#fff;padding:12px;}
+.alphax-kpi .lbl{font-size:11px;color:#6b7280;}
+.alphax-kpi .val{font-size:18px;font-weight:700;margin-top:6px;}
+@media(max-width:1100px){.alphax-kpis{grid-template-columns:1fr 1fr;}}

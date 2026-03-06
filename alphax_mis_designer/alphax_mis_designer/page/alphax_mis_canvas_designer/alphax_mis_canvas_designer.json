@@ -1,0 +1,15 @@
+{
+  "doctype": "Page",
+  "name": "alphax-mis-canvas-designer",
+  "title": "AlphaX MIS Canvas Designer",
+  "module": "AlphaX MIS Designer",
+  "standard": "Yes",
+  "roles": [
+    {
+      "role": "System Manager"
+    },
+    {
+      "role": "Accounts Manager"
+    }
+  ]
+}

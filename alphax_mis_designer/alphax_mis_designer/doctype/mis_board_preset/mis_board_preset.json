@@ -1,0 +1,101 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Board Preset",
+  "module": "AlphaX MIS Designer",
+  "autoname": "format:{user}-{profile}-{visual_template}",
+  "title_field": "preset_title",
+  "fields": [
+    {
+      "fieldname": "preset_title",
+      "fieldtype": "Data",
+      "label": "Preset Title",
+      "reqd": 1
+    },
+    {
+      "fieldname": "user",
+      "fieldtype": "Link",
+      "label": "User",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "profile",
+      "fieldtype": "Select",
+      "label": "Profile",
+      "options": "CEO\nCFO\nDepartment Head",
+      "reqd": 1
+    },
+    {
+      "fieldname": "visual_template",
+      "fieldtype": "Link",
+      "label": "Visual Template",
+      "options": "MIS Visual Template",
+      "reqd": 1
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "mode",
+      "fieldtype": "Select",
+      "label": "Mode",
+      "options": "Actual\nBudget\nBoth",
+      "default": "Both"
+    },
+    {
+      "fieldname": "date_range",
+      "fieldtype": "Select",
+      "label": "Date Range",
+      "options": "Last 30 Days\nMTD\nQTD\nYTD\nCustom",
+      "default": "Last 30 Days"
+    },
+    {
+      "fieldname": "from_date",
+      "fieldtype": "Date",
+      "label": "From Date"
+    },
+    {
+      "fieldname": "to_date",
+      "fieldtype": "Date",
+      "label": "To Date"
+    },
+    {
+      "fieldname": "dimensions",
+      "fieldtype": "Small Text",
+      "label": "Dimensions (fieldname=value, comma separated)"
+    },
+    {
+      "fieldname": "is_default",
+      "fieldtype": "Check",
+      "label": "Default",
+      "default": 0
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts User",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}

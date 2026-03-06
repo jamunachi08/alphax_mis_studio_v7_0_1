@@ -1,0 +1,54 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Data Model",
+  "module": "AlphaX MIS Designer",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "track_changes": 1,
+  "autoname": "field:model_title",
+  "fields": [
+    {
+      "fieldname": "model_title",
+      "label": "Model Title",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "model_version",
+      "label": "Model Version",
+      "fieldtype": "Data",
+      "default": "1.0.0",
+      "reqd": 1
+    },
+    {
+      "fieldname": "primary_dataset",
+      "label": "Primary Dataset",
+      "fieldtype": "Link",
+      "options": "MIS Dataset"
+    },
+    {
+      "fieldname": "metrics",
+      "label": "Metrics",
+      "fieldtype": "Table",
+      "options": "MIS Data Model Metric"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    }
+  ]
+}

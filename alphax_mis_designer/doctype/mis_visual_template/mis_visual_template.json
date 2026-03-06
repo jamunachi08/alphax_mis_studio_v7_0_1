@@ -1,0 +1,58 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Visual Template",
+  "module": "AlphaX MIS Designer",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "autoname": "format:MIS-VT-.#####",
+  "fields": [
+    {
+      "fieldname": "template_title",
+      "label": "Template Title",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "template_xlsx",
+      "label": "Excel Template (XLSX)",
+      "fieldtype": "Attach",
+      "reqd": 1
+    },
+    {
+      "fieldname": "sheet_name",
+      "label": "Sheet Name",
+      "fieldtype": "Data",
+      "default": "",
+      "description": "Blank = first sheet."
+    },
+    {
+      "fieldname": "layout_json",
+      "label": "Layout JSON",
+      "fieldtype": "Long Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "import_layout",
+      "label": "Import Layout",
+      "fieldtype": "Button"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    }
+  ]
+}

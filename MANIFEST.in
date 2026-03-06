@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include setup.py
+recursive-include alphax_mis_designer *.json *.md *.txt *.csv *.html *.css *.js *.png *.jpg *.jpeg *.svg *.woff *.woff2 *.ttf *.eot
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc

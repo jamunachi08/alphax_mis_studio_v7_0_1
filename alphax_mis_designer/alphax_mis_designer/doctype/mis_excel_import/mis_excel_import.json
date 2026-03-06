@@ -1,0 +1,79 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Excel Import",
+  "module": "AlphaX MIS Designer",
+  "autoname": "format:MIS-EXCEL-{YYYY}-{MM}-{####}",
+  "fields": [
+    {
+      "fieldname": "import_title",
+      "fieldtype": "Data",
+      "label": "Import Title",
+      "reqd": 1
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "excel_file",
+      "fieldtype": "Attach",
+      "label": "Excel File",
+      "reqd": 1
+    },
+    {
+      "fieldname": "sheet_name",
+      "fieldtype": "Data",
+      "label": "Sheet Name"
+    },
+    {
+      "fieldname": "label_column",
+      "fieldtype": "Int",
+      "label": "Label Column (1=A)",
+      "default": 1
+    },
+    {
+      "fieldname": "start_row",
+      "fieldtype": "Int",
+      "label": "Start Row",
+      "default": 1
+    },
+    {
+      "fieldname": "analysis",
+      "fieldtype": "Section Break",
+      "label": "Analysis"
+    },
+    {
+      "fieldname": "analysis_json",
+      "fieldtype": "Code",
+      "label": "Analysis JSON",
+      "options": "JSON",
+      "read_only": 1
+    },
+    {
+      "fieldname": "created_template",
+      "fieldtype": "Link",
+      "label": "Created Visual Template",
+      "options": "MIS Visual Template",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

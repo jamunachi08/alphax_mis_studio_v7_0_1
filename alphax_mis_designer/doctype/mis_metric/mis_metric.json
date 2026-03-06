@@ -1,0 +1,77 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Metric",
+  "module": "AlphaX MIS Designer",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "track_changes": 1,
+  "autoname": "field:metric_label",
+  "fields": [
+    {
+      "fieldname": "metric_label",
+      "label": "Metric Label",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "metric_key",
+      "label": "Metric Key",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "dataset",
+      "label": "Dataset",
+      "fieldtype": "Link",
+      "options": "MIS Dataset",
+      "reqd": 1
+    },
+    {
+      "fieldname": "metric_type",
+      "label": "Metric Type",
+      "fieldtype": "Select",
+      "options": "Sum\nAvg\nCount\nFormula",
+      "reqd": 1
+    },
+    {
+      "fieldname": "fieldname",
+      "label": "Field/Column",
+      "fieldtype": "Data",
+      "depends_on": "eval:doc.metric_type in ['Sum','Avg']"
+    },
+    {
+      "fieldname": "formula",
+      "label": "Formula",
+      "fieldtype": "Code",
+      "options": "Python",
+      "depends_on": "eval:doc.metric_type=='Formula'"
+    },
+    {
+      "fieldname": "format",
+      "label": "Format",
+      "fieldtype": "Select",
+      "options": "Currency\nPercent\nNumber",
+      "reqd": 1
+    },
+    {
+      "fieldname": "direction",
+      "label": "Direction",
+      "fieldtype": "Select",
+      "options": "positive_good\nnegative_good",
+      "default": "positive_good"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    }
+  ]
+}

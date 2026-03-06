@@ -1,0 +1,75 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Report Template",
+  "module": "AlphaX MIS Designer",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "autoname": "format:MIS-TPL-.#####",
+  "fields": [
+    {
+      "fieldname": "template_title",
+      "label": "Template Title",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "visual_template",
+      "label": "MIS Visual Template",
+      "fieldtype": "Link",
+      "options": "MIS Visual Template"
+    },
+    {
+      "fieldname": "template_xlsx",
+      "label": "Template XLSX (optional)",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "layout_json",
+      "label": "Layout JSON",
+      "fieldtype": "Long Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_mappings",
+      "label": "Column Mappings",
+      "fieldtype": "Table",
+      "options": "MIS Column Mapping"
+    },
+    {
+      "fieldname": "row_mappings",
+      "label": "Row Mappings",
+      "fieldtype": "Table",
+      "options": "MIS Row Mapping"
+    },
+    {
+      "fieldname": "import_from_excel",
+      "label": "Import From Excel",
+      "fieldtype": "Button"
+    },
+    {
+      "fieldname": "map_sheet_name",
+      "label": "MAP Sheet Name",
+      "fieldtype": "Data",
+      "default": "MAP",
+      "description": "Sheet containing Account -> Label mapping"
+    },
+    {
+      "fieldname": "auto_build_mappings",
+      "label": "Auto Build Row Mappings",
+      "fieldtype": "Button"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    }
+  ]
+}

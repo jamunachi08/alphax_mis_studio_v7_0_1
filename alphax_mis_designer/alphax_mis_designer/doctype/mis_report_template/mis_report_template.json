@@ -1,0 +1,80 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Report Template",
+  "module": "AlphaX MIS Designer",
+  "autoname": "format:MIS-TPL-{#####}",
+  "title_field": "template_title",
+  "fields": [
+    {
+      "fieldname": "template_title",
+      "fieldtype": "Data",
+      "label": "Template Title",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "sec1",
+      "fieldtype": "Section Break",
+      "label": "Excel Template"
+    },
+    {
+      "fieldname": "template_xlsx",
+      "fieldtype": "Attach",
+      "label": "Template XLSX"
+    },
+    {
+      "fieldname": "layout_json",
+      "fieldtype": "Long Text",
+      "label": "Layout JSON",
+      "read_only": 1
+    },
+    {
+      "fieldname": "import_log",
+      "fieldtype": "Long Text",
+      "label": "Import Log",
+      "read_only": 1
+    },
+    {
+      "fieldname": "sec2",
+      "fieldtype": "Section Break",
+      "label": "Column Splits (Department / LOB)"
+    },
+    {
+      "fieldname": "column_mappings",
+      "fieldtype": "Table",
+      "label": "Column Mappings",
+      "options": "MIS Column Mapping"
+    },
+    {
+      "fieldname": "sec3",
+      "fieldtype": "Section Break",
+      "label": "Row Mappings"
+    },
+    {
+      "fieldname": "row_mappings",
+      "fieldtype": "Table",
+      "label": "Row Mappings",
+      "options": "MIS Row Mapping"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0
+    }
+  ]
+}

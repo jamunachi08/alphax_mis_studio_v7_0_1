@@ -1,0 +1,88 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Row Mapping",
+  "module": "AlphaX MIS Designer",
+  "custom": 0,
+  "istable": 1,
+  "autoname": "hash",
+  "editable_grid": 1,
+  "fields": [
+    {
+      "fieldname": "row_no",
+      "label": "Row No",
+      "fieldtype": "Int",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "row_type",
+      "label": "Row Type",
+      "fieldtype": "Select",
+      "options": "Heading\nAccount\nAccount Group\nTotal\nFormula",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "label",
+      "label": "Label",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "accounts",
+      "label": "Accounts (CSV)",
+      "fieldtype": "Small Text",
+      "description": "Comma-separated account names. Used when Row Type = Account."
+    },
+    {
+      "fieldname": "account_group",
+      "label": "Account Group",
+      "fieldtype": "Link",
+      "options": "Account",
+      "description": "Parent account/group."
+    },
+    {
+      "fieldname": "sign",
+      "label": "Sign",
+      "fieldtype": "Select",
+      "options": "+1\n-1",
+      "default": "+1"
+    },
+    {
+      "fieldname": "formula",
+      "label": "Formula",
+      "fieldtype": "Code",
+      "options": "Python"
+    },
+    {
+      "fieldname": "row_key",
+      "label": "Row Key",
+      "fieldtype": "Data",
+      "description": "Optional unique key for formulas",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "total_mode",
+      "label": "Total Mode",
+      "fieldtype": "Select",
+      "options": "\nSum Children\nSum Selected Rows\nTree Rollup",
+      "depends_on": "eval:doc.row_type=='Total'"
+    },
+    {
+      "fieldname": "includes_row_nos",
+      "label": "Include Row Nos",
+      "fieldtype": "Small Text",
+      "description": "Comma-separated row numbers for Sum Selected Rows",
+      "depends_on": "eval:doc.row_type=='Total' && doc.total_mode=='Sum Selected Rows'"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

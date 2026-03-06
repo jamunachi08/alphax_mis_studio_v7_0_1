@@ -1,0 +1,56 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Dataset",
+  "module": "AlphaX MIS Designer",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "track_changes": 1,
+  "autoname": "field:dataset_title",
+  "fields": [
+    {
+      "fieldname": "dataset_title",
+      "label": "Dataset Title",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "source_type",
+      "label": "Source Type",
+      "fieldtype": "Select",
+      "options": "SQL Template\nQuery Report\nGL\nP&L\nBudget",
+      "reqd": 1
+    },
+    {
+      "fieldname": "query_report",
+      "label": "Query Report",
+      "fieldtype": "Link",
+      "options": "Report",
+      "depends_on": "eval:doc.source_type=='Query Report'"
+    },
+    {
+      "fieldname": "sql_template",
+      "label": "SQL Template (SELECT only)",
+      "fieldtype": "Code",
+      "options": "SQL",
+      "depends_on": "eval:doc.source_type=='SQL Template'"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    }
+  ]
+}

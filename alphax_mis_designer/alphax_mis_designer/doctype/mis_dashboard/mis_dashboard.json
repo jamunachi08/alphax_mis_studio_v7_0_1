@@ -1,0 +1,65 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Dashboard",
+  "module": "AlphaX MIS Designer",
+  "autoname": "format:MIS-DASH-{YYYY}-{MM}-{####}",
+  "title_field": "dashboard_title",
+  "fields": [
+    {
+      "fieldname": "dashboard_title",
+      "fieldtype": "Data",
+      "label": "Dashboard Title",
+      "reqd": 1
+    },
+    {
+      "fieldname": "visual_template",
+      "fieldtype": "Link",
+      "label": "Visual Template",
+      "options": "MIS Visual Template",
+      "reqd": 1
+    },
+    {
+      "fieldname": "profile",
+      "fieldtype": "Select",
+      "label": "Profile",
+      "options": "CEO\nCFO\nDepartment Head",
+      "default": "CFO"
+    },
+    {
+      "fieldname": "layout_json",
+      "fieldtype": "Code",
+      "label": "Layout JSON",
+      "options": "JSON",
+      "reqd": 1
+    },
+    {
+      "fieldname": "is_public",
+      "fieldtype": "Check",
+      "label": "Public (All Accounts Users)",
+      "default": 0
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts User",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}

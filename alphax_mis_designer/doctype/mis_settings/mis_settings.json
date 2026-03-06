@@ -1,0 +1,33 @@
+{
+  "doctype": "DocType",
+  "name": "MIS Settings",
+  "module": "AlphaX MIS Designer",
+  "custom": 0,
+  "istable": 0,
+  "issingle": 1,
+  "track_changes": 1,
+  "autoname": "Prompt",
+  "fields": [
+    {
+      "fieldname": "department_fieldname",
+      "label": "Department Dimension Fieldname",
+      "fieldtype": "Data",
+      "default": "cost_center",
+      "description": "Fieldname used to filter Department (default: cost_center)."
+    },
+    {
+      "fieldname": "lob_fieldname",
+      "label": "LOB Dimension Fieldname",
+      "fieldtype": "Data",
+      "default": "",
+      "description": "Optional fieldname to filter LOB if you have custom dimension."
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1
+    }
+  ]
+}
